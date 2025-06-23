@@ -26,11 +26,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 - Solution URL: [GitHub](https://github.com/rizkicaandra/meet-landing-page)
-- Live Site URL: [Live Demo](https://regal-starship-527c1c.netlify.app/)
+- Live Site URL: [Live Demo](https://bejewelled-dango-5db8de.netlify.app/)
 
 ### Built with
 
