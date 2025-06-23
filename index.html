@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+  <title>Frontend Mentor | Meet landing page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cyan: {
+              300: '#8FE3F9',
+              600: '#4D96A9',
+            },
+            purple: {
+              300: '#D9B8FF',
+              600: '#855FB1',
+            },
+            slate: {
+              300: '#D1D1DF',
+              600: '#87879D',
+              900: '#28283D'
+            },
+            white: '#FAFAFA'
+          },
+          fontFamily: {
+            redhat: ['Red Hat Display', 'sans-serif']
+          },
+          fontSize: {
+            'mobile-preset-1': ['2.5rem', { lineHeight: '1.1', letterSpacing: '0rem' }],
+            'mobile-preset-2': ['2rem', { lineHeight: '1.1', letterSpacing: '0rem' }],
+            'mobile-preset-3': ['0.75rem', { lineHeight: '1.1', letterSpacing: '0.25rem' }],
+            'tablet-preset-1': ['3rem', { lineHeight: '1.1', letterSpacing: '0rem' }],
+            'tablet-preset-2': ['2.25rem', { lineHeight: '1.1', letterSpacing: '0rem' }],
+            'tablet-preset-3': ['0.875rem', { lineHeight: '1.1', letterSpacing: '0.25rem' }],
+            'tablet-preset-4': ['1rem', { lineHeight: '1.5', letterSpacing: '0rem' }],
+            'desktop-preset-1': ['4rem', { lineHeight: '1.1', letterSpacing: '0rem' }],
+            'desktop-preset-2': ['2.5rem', { lineHeight: '1.1', letterSpacing: '0rem' }],
+            'desktop-preset-3': ['1rem', { lineHeight: '1.1', letterSpacing: '0.25rem' }],
+            'desktop-preset-4': ['1.125rem', { lineHeight: '1.5', letterSpacing: '0rem' }],
+            'desktop-preset-5': ['1rem', { lineHeight: '1.5', letterSpacing: '0rem' }],
+          },
+          spacing: {
+            '16': '4rem',
+            '18': '4.5rem',
+            '20': '5rem',
+            '24': '6rem',
+            '28': '7rem',
+          },
+          padding: {
+            'mobile-btn-x': "2.5rem",
+            'mobile-btn-y': "1rem",
+            '80': '5rem',
+            '160': '10rem'
+          },
+           backgroundImage: {
+            'footer-mobile': "linear-gradient(rgba(77,150,168,0.8), rgba(77,150,168,0.8)), url('./assets/mobile/image-footer.jpg')",
+            'footer-tablet': "linear-gradient(rgba(77,150,168,0.8), rgba(77,150,168,0.8)), url('./assets/tablet/image-footer.jpg')",
+            'footer-desktop': "linear-gradient(rgba(77,150,168,0.8), rgba(77,150,168,0.8)), url('./assets/desktop/image-footer.jpg')"
+          },
+          height: {
+            160: '10rem',
+            303: '19rem',
+          },
+          width: {
+            335: '22.125rem',
+            394: '24.75rem',
+            1440: '90rem',
+            1120: '70rem'
+          },
+          inset: {
+            'n-6': '-1.5rem',
+            'n-8': '-2rem',
+            'n-25': '-6.25rem',
+            'n-27': '-6.875rem'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="flex flex-col items-center h-screen bg-white font-redhat text-slate-600">
+  <header  class="pt-12">
+    <img src="./assets/logo.svg" alt="Meet logo">
+  </header>
+
+  <main class="grid place-items-center gap-16 py-16 md:gap-0 xl:pb-18">
+  
+    <div class="flex flex-col items-center px-1 md:px-0 md:pb-16 xl:w-1440 xl:h-full xl:flex-row 2xl:justify-center ">
+      <div class="w-full h-160 md:h-303 xl:hidden">
+        <img src="./assets/tablet/image-hero.png" alt="hero banner" class="w-full h-full object-cover object-center">
+      </div>
+      <div class="hidden xl:block xl:w-394 xl:h-303 xl:relative xl:overflow-hidden">
+        <img src="./assets/desktop/image-hero-left.png" alt="hero banner" class="w-full h-full object-cover object-center absolute left-n-6 2xl:left-0">
+      </div>
+      <div class="flex flex-col items-center px-8 gap-6 md:pt-18 md:max-w-md xl:pt-0 xl:min-w-[45%]">
+        <h1 class="mt-12 px-4 text-mobile-preset-1 font-black text-center text-slate-900 md:text-tablet-preset-1 xl:text-desktop-preset-1 xl:w-[80%]">Group Chat for Everyone</h1>
+        <p class="text-tablet-preset-4 text-center xl:desktop-preset-4 xl:w-[70%]">
+          Meet makes it easy to connect with others face-to-face virtually and collaborate across any device. 
+        </p>
+        <div class="flex flex-col items-center gap-4 text-white text-desktop-preset-5 font-black md:flex-row md:justify-center">
+          <button class="bg-cyan-600 px-mobile-btn-x py-mobile-btn-y rounded-full">Download <span class="text-cyan-300">v1.3</span></button>
+          <button class="bg-purple-600 px-mobile-btn-x py-mobile-btn-y rounded-full">What is it?</button>
+        </div>
+      </div>
+      <div class="hidden xl:block xl:w-394 xl:h-303 xl:relative xl:overflow-hidden">
+        <img src="./assets/desktop/image-hero-right.png" alt="hero banner" class="w-fulls h-full object-cover object-center absolute right-n-6 2xl:right-0">
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-start md:pt-14 md:pb-16 xl:pt-13">
+      <!-- Vertical Line -->
+      <div class="w-px h-20 bg-slate-300"></div>
+
+      <!-- Circle -->
+      <div class="flex items-center justify-center w-14 h-14 rounded-full border border-gray-300 md:w-16 md:h-16">
+        <span class="font-semibold text-gray-500">01</span>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-2 gap-4 px-8 md:pb-16 xl:grid-cols-4 xl:px-160">
+      <img src="./assets/desktop/image-woman-in-videocall.jpg" alt="woman in video call" class="rounded-lg">
+      <img src="./assets/desktop/image-women-videochatting.jpg" alt="women video chatting" class="rounded-lg">
+      <img src="./assets/desktop/image-men-in-meeting.jpg" alt="men in meeting" class="rounded-lg">
+      <img src="./assets/desktop/image-man-texting.jpg" alt="man texting" class="rounded-lg">
+    </div>
+    
+    <div class="flex flex-col items-center px-8 text-center md:max-w-lg xl:px-0">
+      <h3 class="text-mobile-preset-3 text-cyan-600 font-black uppercase pb-4 md:text-tablet-preset-3 xl:text-desktop-preset-3">Built for modern use</h3>
+      <h2 class="text-mobile-preset-2 text-slate-900 font-black pb-8 md:text-tablet-preset-2 md:max-w-md xl:text-desktop-preset-2">Smarter meetings, all in one place</h2>
+      <p class="text-tablet-preset-4 xl:text-desktop-preset-4">Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+    </div>
+
+  </main>
+  
+
+  <footer class="w-full flex flex-col items-center gap-6 relative bg-footer-mobile bg-cover bg-center mt-[6.25rem] py-16 px-8 text-center text-white md:bg-footer-tablet xl:flex-row xl:justify-between xl:bg-footer-desktop xl:py-28 xl:px-20">
+    <!-- Line -->
+    <div class="absolute top-n-25 left-1/2 w-px h-20 bg-gray-300 -translate-x-1/2 md:top-n-27"></div>
+
+    <div class="absolute top-n-6 left-1/2 w-14 h-14 rounded-full border border-gray-300 bg-white flex items-center justify-center -translate-x-1/2 md:w-16 md:h-16 md:top-n-8">
+      <span class="text-gray-500 font-bold">02</span>
+    </div>
+    <h2 class="text-mobile-preset-2 font-black md:text-tablet-preset-2 xl:text-desktop-preset-2 xl:max-w-xs xl:text-left">Experience more together</h2>
+    <p class="text-tablet-preset-4 font-medium px-1 md:max-w-lg xl:text-desktop-preset-4 xl:w-335 xl:text-left">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+    <button class="bg-purple-600 px-mobile-btn-x py-mobile-btn-y rounded-full font-black">Download <span class="text-purple-300">v1.3</span></button>    
+  </footer>
+</body>
+</html>
